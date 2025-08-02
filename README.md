@@ -96,6 +96,58 @@ The application works in demo mode without a Resend API key. Email sending will 
 5. **Contact Management**: View contacts, send follow-ups to stale contacts
 6. **Real-time Updates**: Watch email status change from "Sent" to "Delivered"
 
+## 📖 Simple User Manual
+
+### Getting Started
+1. **Access the App**: Open the application in your browser
+2. **Navigate**: Use the sidebar to switch between sections (Overview, Deals, Contacts, Email Activity)
+
+### Creating Deals (Main Feature)
+1. **Go to Deals Tab**: Click "Deals" in the sidebar
+2. **Fill Out Form**:
+   - **Company Name**: Enter the startup name (e.g., "GreenTech Solutions")
+   - **Industry**: Select from dropdown (CleanTech, AI, CPG, etc.)
+   - **Stage**: Choose funding stage (Seed, Series A, etc.)
+   - **Description**: Brief description of the opportunity
+3. **Submit**: Click "Create Deal & Notify Investors"
+4. **Watch Magic**: The system automatically emails all investors interested in that industry
+
+### Managing Contacts
+1. **Go to Contacts Tab**: Click "Contacts" in the sidebar
+2. **View Contact List**: See all investors with their status badges:
+   - **Green (Recent)**: Contacted within 7 days
+   - **Blue (Active)**: Contacted 8-29 days ago  
+   - **Red (Stale)**: Not contacted in 30+ days
+3. **Filter Contacts**: Use the search bar, industry filter, or status buttons
+4. **Send Follow-ups**: Click the orange "Follow-up X Stale Contacts" button to re-engage
+
+### Monitoring Email Activity
+1. **Go to Email Activity Tab**: Click "Email Activity" in the sidebar
+2. **View Email Stats**: See totals for emails sent today, delivered, failed
+3. **Track Individual Emails**: Monitor each email's status and delivery
+4. **Real-time Updates**: Watch as email status changes from "Sent" to "Delivered"
+
+### Dashboard Overview
+1. **View Metrics**: See key numbers at a glance
+2. **Recent Activity**: Check the latest email activity
+3. **Quick Actions**: Use buttons to jump to Deal creation or Contact management
+
+### Email Status Meanings
+- **Sent** (Yellow): Email has been sent but delivery not confirmed
+- **Delivered** (Green): Email successfully delivered to recipient
+- **Failed** (Red): Email delivery failed
+
+### Pro Tips for Demo
+- **Create CleanTech Deal**: Shows immediate automation with 2-3 matching investors
+- **Check Console**: In demo mode, actual email content is logged to browser console
+- **Watch Status Changes**: Email status automatically updates after 2-6 seconds
+- **Try Stale Follow-ups**: Use the orange button to send bulk re-engagement emails
+
+### Troubleshooting
+- **No Emails Sending**: Normal in demo mode - check browser console for simulated emails
+- **Add Real API Key**: Add your Resend API key to `.env.local` for actual email sending
+- **Status Not Updating**: Wait 2-6 seconds for simulation to complete
+
 ## 📊 Demo Data
 
 The application comes pre-seeded with:
