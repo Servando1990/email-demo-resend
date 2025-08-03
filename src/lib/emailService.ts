@@ -32,7 +32,7 @@ export class EmailService {
       }
 
       const { data, error } = await resend.emails.send({
-        from: 'Misha <misha@yourdomain.com>', // Replace with your verified domain
+        from: 'Servando <onboarding@resend.dev>', // Using Resend's verified domain
         to: params.to,
         subject: params.subject,
         html: params.html,
@@ -68,7 +68,7 @@ Given your previous investments in ${contact.industry.join(', ')}, I thought thi
 Would you be open to a brief call to discuss this opportunity?
 
 Best regards,
-Misha Vasilchikov`;
+Your Name`;
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -90,7 +90,7 @@ Misha Vasilchikov`;
         <p>Would you be open to a brief call to discuss this opportunity?</p>
         
         <p>Best regards,<br>
-        <strong>Misha Vasilchikov</strong></p>
+        <strong>Your Name</strong></p>
       </div>
     `;
 
@@ -107,7 +107,7 @@ It's been a while since we last connected. I have several new investment opportu
 Would you be open to a brief call to discuss?
 
 Best regards,
-Misha Vasilchikov`;
+Your Name`;
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -120,7 +120,7 @@ Misha Vasilchikov`;
         <p>Would you be open to a brief call to discuss?</p>
         
         <p>Best regards,<br>
-        <strong>Misha Vasilchikov</strong></p>
+        <strong>Your Name</strong></p>
       </div>
     `;
 
@@ -137,7 +137,7 @@ I noticed we missed our scheduled meeting. No worries at all - these things happ
 Would you like to reschedule? I have some exciting new opportunities I'd love to discuss with you.
 
 Best regards,
-Misha Vasilchikov`;
+Your Name`;
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -150,7 +150,7 @@ Misha Vasilchikov`;
         <p>Would you like to reschedule? I have some exciting new opportunities I'd love to discuss with you.</p>
         
         <p>Best regards,<br>
-        <strong>Misha Vasilchikov</strong></p>
+        <strong>Your Name</strong></p>
       </div>
     `;
 

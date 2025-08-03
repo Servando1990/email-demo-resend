@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Misha Email Demo - Investor Outreach Automation",
-  description: "Email automation demo for investor outreach using Resend API",
+  title: "Investor Outreach Automation",
+  description: "Email automation platform for investor outreach using Resend API",
 };
 
 export default function RootLayout({

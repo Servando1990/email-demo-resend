@@ -1,11 +1,21 @@
 import { Contact, Deal, EmailLog, DashboardMetrics } from './types';
 
-let contacts: Contact[] = [];
+// Initialize with one minimal contact for demo purposes
+let contacts: Contact[] = [
+  {
+    id: 'demo-contact-1',
+    name: 'Servando',
+    email: 'servandotorresga@gmail.com', // Change this to your email to receive test emails
+    industry: ['AI'],
+    lastContactDate: new Date('2024-01-01'),
+    status: 'stale'
+  }
+];
 let deals: Deal[] = [];
 let emailLogs: EmailLog[] = [];
 
 function generateId(): string {
-  return Math.random().toString(36).substr(2, 9);
+  return Math.random().toString(36).substring(2, 11);
 }
 
 function calculateContactStatus(lastContactDate: Date): 'active' | 'stale' | 'recent' {

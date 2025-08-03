@@ -34,7 +34,7 @@ export default function DashboardMetrics() {
       icon: Briefcase,
       color: 'blue',
       description: 'Investment opportunities',
-      trend: '+2 this week'
+      trend: 'Active deals'
     },
     {
       title: 'Total Contacts',
@@ -58,7 +58,7 @@ export default function DashboardMetrics() {
       icon: TrendingUp,
       color: 'orange',
       description: 'Email delivery rate',
-      trend: '+5% this week'
+      trend: 'Overall rate'
     }
   ];
 

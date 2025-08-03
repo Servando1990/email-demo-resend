@@ -193,7 +193,7 @@ export default function DealForm() {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
                 errors.companyName ? 'border-red-300 bg-red-50' : 'border-gray-300'
               }`}
-              placeholder="e.g. SolarTech Inc"
+              placeholder="Enter company name"
               disabled={isSubmitting}
             />
             {errors.companyName && (
@@ -262,7 +262,7 @@ export default function DealForm() {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none ${
                 errors.description ? 'border-red-300 bg-red-50' : 'border-gray-300'
               }`}
-              placeholder="Brief description of the investment opportunity, key value propositions, and what makes this deal attractive..."
+              placeholder="Enter deal description..."
               disabled={isSubmitting}
             />
             <div className="mt-1 flex justify-between">

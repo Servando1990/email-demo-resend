@@ -9,20 +9,46 @@ export async function POST(request: NextRequest) {
 
     if (type === 'deal_announcement' && dealId) {
       // Send deal announcement to matching contacts
+      const allDeals = dataStore.deals.getAll();
       const deal = dataStore.deals.getById(dealId);
+      
+      console.log('Debug - Campaign dealId:', dealId);
+      console.log('Debug - All deals:', allDeals.map(d => ({ id: d.id, name: d.companyName })));
+      console.log('Debug - Found deal:', deal ? deal.companyName : 'NOT FOUND');
+      
       if (!deal) {
         return NextResponse.json(
-          { success: false, error: 'Deal not found' },
+          { 
+            success: false, 
+            error: `Deal not found with ID: ${dealId}`,
+            debug: {
+              searchedId: dealId,
+              availableDeals: allDeals.map(d => ({ id: d.id, name: d.companyName }))
+            }
+          },
           { status: 404 }
         );
       }
 
       // Find contacts interested in this industry
+      const allContacts = dataStore.contacts.getAll();
       const matchingContacts = dataStore.contacts.getByIndustry(deal.industry);
+      
+      console.log('Debug - Deal industry:', deal.industry);
+      console.log('Debug - All contacts:', allContacts.map(c => ({ name: c.name, industry: c.industry })));
+      console.log('Debug - Matching contacts:', matchingContacts.length);
       
       if (matchingContacts.length === 0) {
         return NextResponse.json(
-          { success: false, error: 'No matching contacts found for this industry' },
+          { 
+            success: false, 
+            error: `No matching contacts found for industry "${deal.industry}". Available contacts: ${allContacts.length}`,
+            debug: {
+              dealIndustry: deal.industry,
+              totalContacts: allContacts.length,
+              contactIndustries: allContacts.map(c => c.industry)
+            }
+          },
           { status: 404 }
         );
       }
